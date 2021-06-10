@@ -1,0 +1,130 @@
+{% extends 'html/Base.html' %}
+{% block title %}Navigate To Smiley Foundation{% endblock %}
+{% block content %}
+{% load static %}
+
+<br><br><br><br><br>
+<br>
+<div class="bg-image" 
+      style="background-image: url('https://cdn.hipwallpaper.com/i/52/74/QEP83w.jpg');
+      height: 100%">
+
+<div class=" text-center text-dark" >
+  <h1>Navigate To Us</h1>
+  
+</div>
+
+<div class="map-container">
+	
+
+	<div id="map-container-google" padding-bottom:75;
+    position:relative;
+    height:5;>
+
+      <iframe left:1; top:1; height="100%" width="100%" position:absolute; src="https://maps.google.com/maps?q=proddatur&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="1"
+        style="border:1" allowfullscreen></iframe>
+    </div>
+
+</div>
+
+         <section id="contact">
+
+              <!-- Heading -->
+              <h2 class="mb-5 font-weight-bold text-center">Contact us</h2>
+
+              <!--Grid row-->
+              <div class="row">
+
+                  <!--Grid column-->
+                  <div class="col-lg-5 col-md-12">
+                      <!-- Form contact -->
+                      <form class="p-5 grey-text">
+                          <div class="md-form form-sm text-white"> 
+                              <input type="text" id="form3" class="form-control form-control-sm">
+                              <label for="form3">Your name</label>
+                          </div>
+                          <div class="md-form form-sm text-white"> 
+                              <input type="text" id="form2" class="form-control form-control-sm">
+                              <label for="form2">Your email</label>
+                          </div>
+                          <div class="md-form form-sm text-white">
+                              <input type="text" id="form32" class="form-control form-control-sm">
+                              <label for="form34">Subject</label>
+                          </div>
+                          <div class="md-form form-sm text-white"> 
+                              <textarea type="text" id="form8" class="md-textarea form-control form-control-sm" rows="4"></textarea>
+                              <label for="form8">Your message</label>
+                          </div>
+                          <div class="text-center mt-4">
+                              <button class="btn btn-primary">Send <i class="fa fa-paper-plane-o ml-1"></i></button>
+                          </div>
+                      </form>
+                      <!-- Form contact -->
+                  </div>
+                  <!--Grid column-->
+
+                  <!--Grid column-->
+                  <div class="col-lg-7 col-md-12">
+
+                      <!--Grid row-->
+                      <div class="row text-center">
+
+                           <div class="col-lg-4 col-md-6 mb-3">
+<p>Follows Us On</p>
+ <a href="https://www.facebook.com/memoriesfor.you.5">
+<img border="0" alt="facebook" src="{% static 'images/download1.png' %}" width="50" height="50">
+</a>
+<a href="https://instagram.com/memoriesforyoupdtr?igshid=1jsc4iasvubxu">
+<img border="0" alt="gmail" src="{% static 'images/download.png' %}" width="50" height="50">
+</a>
+<a href="https://instagram.com/memoriesforyoupdtr?igshid=1jsc4iasvubxu">
+<img border="0" alt="instagram" src="{% static 'images/download2.png' %}" width="50" height="50">
+</a>
+                          </div>
+                          <!--Grid column-->
+                          <!--Grid column-->
+                          <div class="col-lg-4 col-md-12 mb-3">
+
+                              <p><i class="text-gold "></i>Memories4u
+                                <br>PDTR<br>Event Mannagers !<br>
+                                memories4u21@gmail.com<br>
+
+                                      7207420207</p>
+
+                          </div>
+                          <!--Grid column-->
+
+                          <!--Grid column-->
+                          <div class="col-lg-4 col-md-6 mb-3">
+
+                              <p><i class="text-gray"></i>Mon - Sat, 8:00 Am-10:00 Pm<br>
+                                Address:M4U, <br>
+                                Event Planners !,<br>
+                                Pdtr,Kadapa,AP,<br>516362.
+                              </p>
+
+                          </div>
+                          <!--Grid column-->
+
+                          <!--Grid column-->
+                       
+                      </div>
+                      <!--Grid row-->
+
+                      <!--Google map-->
+                      <div id="map-container" class="z-depth-1-half map-container mb-5" style="height: 400px"></div>
+
+                  </div>
+                  <!--Grid column-->
+
+              </div>
+              <!--Grid row-->
+
+          </section>
+          <!--Section: Contact-->
+
+
+
+
+
+{% endblock %}

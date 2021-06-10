@@ -1,0 +1,64 @@
+{% extends 'html/base.html' %}
+{% block title %}Login Smiley{% endblock %}
+{% block content %}
+<!-- Background image -->
+<div class="bg-image" 
+     style="background-image: url('https://i.pinimg.com/originals/af/8d/63/af8d63a477078732b79ff9d9fc60873f.jpg');
+            height: 100%">
+
+
+<div id="login">
+        <h3 class="text-center text-white pt-5"></h3>
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" action="" method="POST">
+                            <div class="container">
+                            <h3 class="card-title text-center text-info">Login</h3>
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="username" class="text-info">Username:</label><br>
+                                <input type="text" name="username" id="username" placeholder="Enter your Username" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-info">Password:</label><br>
+                                <input type="password" name="password" id="password" placeholder="Enter your Password" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <br>
+                                <input  type="submit" name="submit" class="btn btn-info btn-md col-sm" value="submit">
+                            </div>
+                            <div class="row">
+                        
+                        <div class="col">
+                            <a href="{% url 'Register' %}" class="form-control btn btn-primary ">Create  New User</a>  
+                    
+                        </div>
+                        <div class="col">
+
+                            <a href="{% url 'Reset_password' %}" class="form-control btn btn-danger" >Forget Password ?</a>
+                        </div>
+                    </div>
+
+                    
+            
+</div></div>
+                        </form>
+                        <br><br>
+                        <br><br>
+                        <br>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+        
+
+ </div></div>
+{% endblock %}
