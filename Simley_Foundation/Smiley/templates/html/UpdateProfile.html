@@ -2,19 +2,27 @@
 {% block title %}Update Profile {% endblock %}
 {% block content %}
 <div class="container mt-5">
-	<div class="card mx-auto col-md6 shadow-lg">
+	
+	<div class="card col-md-6 mt-4 shadow-lg mx-auto">
+		<h3 class="bg-light text-danger text-center mt-2 border rounded">Update Your Details</h3>
 		<div class="card-body">
-			<form method="POST">
+			<form method="post" enctype="multipart/form-data">
 				{% csrf_token %}
-				{% for m in e %}
+			<table class="table table-borderless">
+				{% for k in us %}
 				<tr>
-					<td>{{m}}</td>
+					<td>{{k}}</td>
 				</tr>
 				{% endfor %}
-				<input type="submit" value="Update" class="btn btn-success">
+				{% for j in imp %}
+				<tr>
+					<td>{{j}}</td>
+				</tr>
+				{% endfor %}
+			</table>
+			<input type="submit" value="Update" class="btn btn-success my-2 btn btn-block">
 			</form>
 		</div>
-		
 	</div>
 </div>
 {% endblock %}

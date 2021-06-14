@@ -9,10 +9,17 @@
       <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
       <script src="{% static 'jquery/sample.js' %}"></script>
       <script src="{% static 'js/bootstrap.min.js' %}"></script>
+      <style>
+      .margin-top{
+         margin-top: 140px;
+      }
+   </style>
    </head>
    <body>
       {% include 'html/Navbar.html' %}
+      <div class="margin-top">
       {% block content %}
+      </div>
       {% endblock %}
       <br>      <br>      <br>     
    </body>

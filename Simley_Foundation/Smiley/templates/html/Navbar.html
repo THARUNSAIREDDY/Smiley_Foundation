@@ -21,14 +21,37 @@
          <li class="nav-item">
             <a class="nav-link" href="{% url 'Contact' %}">ContactUs</a>
          </li>
+         <li class="nav-item">
+            <a class="nav-link" href="{% url 'Sugestion' %}">Sugestion</a>
+         </li>
+    
+    {% else %}
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'Home' %}">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'dsh' %}">Dashboard</a>
+    </li>
     {% endif %}
-    </ul>
-    <ul class="navbar-nav ml-auto" style="margin-right:60px">
+  </ul>
+  <ul class="navbar-nav ml-auto" style="margin-right:120px">
     {% if not user.is_authenticated %}
     <li class="nav-item">
-      <a class="nav-link" href="{% url 'Login' %}">LogIn</a>
+      <a class="nav-link" href="{% url 'Login' %}">Login</a>
     </li>
-    {% endif %}    
-    </ul>
+    {% else %}
+        <li class="dropdown">
+  <a type="button" class="nav-link dropdown-toggle" data-toggle="dropdown">
+    {{user.username}}
+  </a>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="{% url 'cg' %}">Change Password</a>
+    <a class="dropdown-item" href="{% url 'Profile' %}">Profile</a>
+    <a class="dropdown-item" href="{% url 'Logout' %}">Logout</a>
+  </div>
+</li>
+{% endif %}
+  </ul>
+
    </div>
 </nav>
